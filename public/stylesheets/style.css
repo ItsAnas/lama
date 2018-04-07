@@ -6,12 +6,13 @@ html, body {
 
 body {
     font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-    background: linear-gradient(to bottom right, cyan, blue) top right no-repeat;
-    background-attachment: fixed;
+/*     background: linear-gradient(to bottom right, cyan, blue) top right no-repeat;
+    background-attachment: fixed; */
+    background-color: #0D222B !important; 
 }
 
 a {
-    color: #00B7FF;
+    color: #30718B !important;
 }
 
 .img-rounded {
@@ -25,6 +26,20 @@ a {
 .badge {
     margin-right: 5px !important;
     padding: 10px !important;
+}
+
+.badge-primary {
+  background-color:#30718B !important;
+}
+
+.btn-outline-primary {
+  color: #4FACAF !important;
+  border-color: #4FACAF !important;
+}
+
+.btn-outline-primary:hover {
+  background-color: #4FACAF !important;
+  color: #fff !important;
 }
 
 /*=====  End of Override Bootstrap     ======*/
@@ -68,6 +83,10 @@ a {
 .apply-btn{
   display: block;
   float: right;
+}
+
+.post-footer {
+  height: 38px;
 }
 /*=====  End of Post                   ======*/
 

@@ -45,8 +45,8 @@
     <div class="card post">
         <div class="row" style="margin:10px">
             <div class="col-xs-6 col-md-4 col-lg-2 d-flex flex-column justify-content-center">
-                <img src=<%= elem.profilepic %> class="img-rounded mb-2 user-img">
-                <div> <a href=`http://localhost:3000/<%= elem.author %>` class="author-link"><%= elem.author %></a></div>
+                    <a href=`http://localhost:3000/<%= elem.author %>`><img src=<%= elem.profilepic %> class="img-rounded mb-2 user-img"></a>
+                <a href=`http://localhost:3000/<%= elem.author %>` class="author-link"><%= elem.author %></a>
             </div>
             <div class="col-xs-6 col-md-8 col-lg-10 d-flex flex-column justify-content-between">
                 <h1>
@@ -59,7 +59,7 @@
                         <span class="badge badge-pill badge-primary"><%= skill %></span>                    
                     <% }) %>
                 </div>
-                <div>
+                <div class="post-footer">
                     <button class="btn btn-outline-primary apply-btn ">Apply</button>
                 </div>
             </div>
@@ -73,12 +73,12 @@
       if ($(this)[0].classList[1] == "btn-outline-primary")
         {
           $(this).html("Cancel");  
-          $(this).attr('class', 'btn btn-danger ');
+          $(this).attr('class', 'btn btn-danger apply-btn');
         }
       else
         {
               $(this).html("Apply");  
-              $(this).attr('class', 'btn btn-outline-primary ');
+              $(this).attr('class', 'btn btn-outline-primary apply-btn');
         }
         $(this).slideDown("slow");
     });   
