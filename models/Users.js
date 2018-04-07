@@ -4,6 +4,7 @@ const UserSchema = mongoose.Schema({
     name: { type: String, required: true },
     email: { type: String, required: true },
     skills: { type: Array, required: true },
+    profilepic: { type: String, required: true },
 });
 
 module.exports = mongoose.model('User', UserSchema);
