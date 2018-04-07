@@ -1,13 +1,9 @@
-const express = require('express');
-const router = express.Router();
+var express = require('express');
+var router = express.Router();
 
-/* GET home page */
+/* GET home page. */
 router.get('/', function(req, res, next) {
-  res.redirect('/fb/auth/facebook');
-});
-
-router.get('/errortest', function(req, res, next) {
-  res.send("ERROOOOOR");
+  res.render('index', { title: 'Express' });
 });
 
 module.exports = router;
