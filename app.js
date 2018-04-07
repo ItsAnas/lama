@@ -6,7 +6,10 @@ var logger = require('morgan');
 var layouts = require('express-ejs-layouts');
 
 var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
+var myProfile = require('./routes/my-profile')
+var profilsPublicRouter = require('./routes/profils-public');
+
+
 var connection = require('./database');
 var app = express();
 
@@ -25,7 +28,8 @@ connection
       app.use(layouts);
 
       app.use('/', indexRouter);
-      app.use('/users', usersRouter);
+      app.use('/my-profile', myProfile);
+      app.use('/profils-public', profilsPublicRouter);
 
       // catch 404 and forward to error handler
       app.use(function(req, res, next) {
