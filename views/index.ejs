@@ -1,29 +1,69 @@
 <%- contentFor('title') %>
     Lama
 
-    <%- contentFor('body') %>
-        <div class="container">
-            <div class="card post">
-                <div class="row" style="margin:10px">
-                    <div class="col-xs-6 col-md-4 col-lg-2 d-flex flex-column justify-content-center">
-                        <img src="https://www.w3schools.com/bootstrap4/img_avatar1.png" class="img-responsive img-thumbnail mb-2 profile-pic">
-                        <button class="btn btn-primary btn-block">See Profile</button>
-                    </div>
-                    <div class="col-xs-6 col-md-8 col-lg-10 d-flex flex-column justify-content-between">
-                        <h1 class="display-4">
-                            <a href="#"> Project Title</a>
-                        </h1>
-                        <p class="post-desc">Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem
-                            ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsumLorem
-                            ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem
-                            ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum </p>
-                        <div class="d-flex skill-wrapper">
-                            <span class="badge badge-pill badge-primary">Info</span>
-                            <span class="badge badge-pill badge-primary">Info</span>
-                            <span class="badge badge-pill badge-primary">Info</span>
-                        </div>
-                        <button class="btn btn-primary btn-block align-self-end" id="apply-btn">Apply</button>
-                    </div>
+<%- contentFor('body') %>
+<div class="container">
+    <div class="card post">
+        <div class="row" style="margin:10px">
+            <div class="col-xs-6 col-md-4 col-lg-2 d-flex flex-column justify-content-center">
+                <img src="https://www.w3schools.com/bootstrap4/img_avatar1.png" class="img-responsive img-thumbnail mb-2 profile-pic">
+                <button class="btn btn-primary btn-block">See Profile</button>
+            </div>
+            <div class="col-xs-6 col-md-8 col-lg-10 d-flex flex-column justify-content-between">
+                <h1 class="display-4">
+                    <a href="#"> Project Title</a>
+                </h1>
+                <p class="post-desc">Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem
+                    ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsumLorem
+                    ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem
+                    ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum </p>
+                <div class="d-flex skill-wrapper">
+                    <span class="badge badge-pill badge-primary">Info</span>
+                    <span class="badge badge-pill badge-primary">Info</span>
+                    <span class="badge badge-pill badge-primary">Info</span>
                 </div>
+                <button class="btn btn-primary btn-block align-self-end apply-btn">Apply</button>
             </div>
         </div>
+    </div>
+    <div class="card post">
+        <div class="row" style="margin:10px">
+            <div class="col-xs-6 col-md-4 col-lg-2 d-flex flex-column justify-content-center">
+                <img src="https://www.w3schools.com/bootstrap4/img_avatar1.png" class="img-responsive img-thumbnail mb-2 profile-pic">
+                <button class="btn btn-primary btn-block">See Profile</button>
+            </div>
+            <div class="col-xs-6 col-md-8 col-lg-10 d-flex flex-column justify-content-between">
+                <h1 class="display-4">
+                    <a href="#"> Project Title</a>
+                </h1>
+                <p class="post-desc">Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem
+                    ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsumLorem
+                    ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem
+                    ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum </p>
+                <div class="d-flex skill-wrapper">
+                    <span class="badge badge-pill badge-primary">Info</span>
+                    <span class="badge badge-pill badge-primary">Info</span>
+                    <span class="badge badge-pill badge-primary">Info</span>
+                </div>
+                <button class="btn btn-primary btn-block align-self-end apply-btn" >Apply</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    $(".apply-btn").click(function(){
+    $(this).slideUp("slow", function(){
+      if ($(this)[0].classList[1] == "btn-primary")
+        {
+          $(this).html("Cancel");  
+          $(this).attr('class', 'btn btn-danger btn-block');
+        }
+      else
+        {
+              $(this).html("Apply");  
+              $(this).attr('class', 'btn btn-primary btn-block');
+        }
+        $(this).slideDown("slow");
+    });   
+});
+</script>
