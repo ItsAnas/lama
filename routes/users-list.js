@@ -6,8 +6,10 @@ var Users = require('../models/Users');
 
 /* GET profils public listing. */
 router.get('/', function(req, res, next) {
-  
-  res.render('profils-public');
+  Users.find()
+  .then(data => {
+      res.render('users-list', { data_users: data });
+  });
 });
 
 module.exports = router;

@@ -8,4 +8,4 @@ const AdSchema = mongoose.Schema({
     nb_person: { type: Number, required: true },
 });
 
-module.exports = mongoose.model('Ad', AdSchema);
+module.exports = mongoose.model('Ads', AdSchema);

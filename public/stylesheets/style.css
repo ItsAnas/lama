@@ -60,6 +60,15 @@ a {
     width: 150px;
 }
 
+.author-link{
+  text-transform: capitalize;
+  text-align: center;
+}
+
+.apply-btn{
+  display: block;
+  float: right;
+}
 /*=====  End of Post                   ======*/
 
 /*=============================================

@@ -4,79 +4,84 @@
 <%- contentFor('body') %>
 <div class="container animated fadeIn">
         <div class="card post post-project">
-            <h1 class="display-4" style="margin-left:20px">
-                New project
-            </h1>
-            <hr>
-            <div class="row" style="margin:10px">
-                <div class="col-xs-6 col-md-4 col-lg-2 vcenter">
-                    <div style="height:10em">
-                        <img src="https://www.w3schools.com/bootstrap4/img_avatar1.png" class="user-img img-rounded">
-                    </div>
-                </div>
-                <!--
-            -->
-                <div class="col-xs-6 col-md-8 col-lg-10 vcenter">
-                    <div>
-                        <div class="form-group">
-                            <label for="usr">Project's Name:</label>
-                            <input type="text" class="form-control" id="usr">
-                        </div>
-                        <div class="form-group">
-                            <form>
-                                <label for="comment">Description:</label>
-                                <textarea class="form-control" rows="5" id="comment"></textarea>
-                                <hr>
-                                <p>Language/Tools:</p>
-
-                                <div id="tags"></div>
-                            </form>
+                <h1 class="display-4" style="margin-left:20px">
+                    New project
+                </h1>
+                <hr>
+                <div class="row" style="margin:10px">
+                    <div class="col-xs-6 col-md-4 col-lg-2 vcenter">
+                        <div style="height:10em">
+                            <img src="https://www.w3schools.com/bootstrap4/img_avatar1.png" class="user-img img-rounded">
                         </div>
                     </div>
-                </div>
-                <div class="col-xs-6 col-md-4 col-lg-2 vcenter">
-                </div>
-                <div class="col-xs-6 col-md-8 col-lg-10 vcenter">
-                    <button class="btn btn-primary btn-block" id="apply-btn">Post</button>
-                </div>
-<% data.forEach(elem => { %>
+                    <!--
+                -->
+                    <div class="col-xs-6 col-md-8 col-lg-10 vcenter">
+                        <div>
+                            <div class="form-group">
+                                <label for="usr">Project's Name:</label>
+                                <input type="text" class="form-control" id="usr">
+                            </div>
+                            <div class="form-group">
+                                <form>
+                                    <label for="comment">Description:</label>
+                                    <textarea class="form-control" rows="5" id="comment"></textarea>
+                                    <hr>
+                                    <p>Language/Tools:</p>
 
+                                    <div id="tags"></div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-6 col-md-4 col-lg-2 vcenter">
+                    </div>
+                    <div class="col-xs-6 col-md-8 col-lg-10 vcenter">
+                        <button class="btn btn-outline-primary">Post</button>
+                    </div>
+                </div>
+        </div>
+    <% data.forEach(elem => { %>
     <div class="card post">
         <div class="row" style="margin:10px">
             <div class="col-xs-6 col-md-4 col-lg-2 d-flex flex-column justify-content-center">
-                <img src=<%= elem.profilepic %> class="img-responsive img-thumbnail mb-2 profile-pic">
-                by <a href=`http://localhost:3000/<%= elem.author %>`><%= elem.author %></a>
+                <img src=<%= elem.profilepic %> class="img-rounded mb-2 user-img">
+                <div> <a href=`http://localhost:3000/<%= elem.author %>` class="author-link"><%= elem.author %></a></div>
             </div>
             <div class="col-xs-6 col-md-8 col-lg-10 d-flex flex-column justify-content-between">
-                <h1 class="display-4">
+                <h1>
                     <a href="#"> <%= elem.title %></a>
                 </h1>
                 <p class="post-desc"><%= elem.description %></p>
                 <div class="d-flex skill-wrapper">
-                    <% const skills= elem.skills_need %>
+                    <% const skills = elem.skills_need %>
                     <% skills.forEach(skill => { %>
-                        <span class="badge badge-pill badge-primary"><%= skill %></span>
-                        
+                        <span class="badge badge-pill badge-primary"><%= skill %></span>                    
                     <% }) %>
                 </div>
-            </div>
-                <% }) %>
+                <div>
+                    <button class="btn btn-outline-primary apply-btn ">Apply</button>
+                </div>
             </div>
         </div>
-        <script>
-            // Animate button
-            $(".apply-btn").click(function () {
-                $(this).slideUp("slow", function () {
-                    if ($(this)[0].classList[1] == "btn-primary") {
-                        $(this).html("Cancel");
-                        $(this).attr('class', 'btn btn-danger ');
-                    } else {
-                        $(this).html("Apply");
-                        $(this).attr('class', 'btn btn-primary');
-                    }
-                    $(this).slideDown("slow");
-                });
-            });
-
-            new Taggle('tags');
-        </script>
+      </div>
+    <% }) %>
+</div>
+<script>
+    $(".apply-btn").click(function(){
+    $(this).slideUp("slow", function(){
+      if ($(this)[0].classList[1] == "btn-outline-primary")
+        {
+          $(this).html("Cancel");  
+          $(this).attr('class', 'btn btn-danger ');
+        }
+      else
+        {
+              $(this).html("Apply");  
+              $(this).attr('class', 'btn btn-outline-primary ');
+        }
+        $(this).slideDown("slow");
+    });   
+});
+new Taggle('tags');
+</script>
