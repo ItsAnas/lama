@@ -1,8 +1,41 @@
+@import "./normalize.css";
+
+html, body {
+  height: 100%;
+}
 body {
-  padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background: linear-gradient(to bottom right, cyan, blue);  
+    
 }
 
 a {
   color: #00B7FF;
+}
+
+.navbar {
+  margin-bottom: 30px;
+}
+
+.card.post {
+  margin-bottom: 10px;
+}
+
+.post-desc {
+  overflow: hidden;
+text-overflow: ellipsis;
+display: -webkit-box;
+-webkit-line-clamp: 5;
+-webkit-box-orient: vertical;
+}
+
+.skill-wrapper {
+  border-top: 1px solid #ccc;
+  padding-top: 10px;
+  margin-bottom: 10px;
+}
+
+.skill-wrapper span {
+  margin-right: 5px;
+  padding: 10px;
 }
