@@ -8,8 +8,7 @@ var Users = require('../models/Users');
 router.get('/', function(req, res, next) {
     Users.find({ name: "lucy" })
     .then(data => {
-        console.log("lol");
-        res.render('my-profile', { data_user: data });
+        res.render('my-profile', { data_user: data[0] });
     });
 });
 

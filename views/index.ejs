@@ -2,8 +2,8 @@
     Lama
 
 <%- contentFor('body') %>
-<% data.forEach(elem => { %>
 <div class="container animated fadeIn">
+    <% data.forEach(elem => { %>
     <div class="card post">
         <div class="row" style="margin:10px">
             <div class="col-xs-6 col-md-4 col-lg-2 d-flex flex-column justify-content-center">
@@ -16,17 +16,16 @@
                 </h1>
                 <p class="post-desc"><%= elem.description %></p>
                 <div class="d-flex skill-wrapper">
-                    <% const skills= elem.skills_need %>
+                    <% const skills = elem.skills_need %>
                     <% skills.forEach(skill => { %>
-                        <span class="badge badge-pill badge-primary"><%= skill %></span>
-                        
+                        <span class="badge badge-pill badge-primary"><%= skill %></span>                    
                     <% }) %>
                 </div>
                 <button class="btn btn-primary btn-block align-self-end apply-btn">Apply</button>
             </div>
         </div>
+      </div>
     <% }) %>
-    </div>
 </div>
 <script>
     $(".apply-btn").click(function(){
