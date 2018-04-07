@@ -1,0 +1,30 @@
+{
+  "name": "lama",
+  "version": "1.0.0",
+  "main": "src/start.js",
+  "license": "CC0-1.0",
+  "scripts": {
+    "build-server": "",
+    "babel-node": "babel-node --presets=/*a*/",
+    "watch": "NODE_ENV=development nodemon --exec yarn run babel-node --presets=es2015 --  src/start.js "
+  },
+  "devDependencies": {
+    "babel-cli": "6.26.0",
+    "babel-eslint": "8.2.1",
+    "babel-preset-env": "1.6.1",
+    "babel-preset-es2015": "6.24.1",
+    "eslint": "4.18.0",
+    "nodemon": "1.12.0"
+  },
+  "dependencies": {
+    "bcrypt": "^1.0.3",
+    "body-parser": "^1.18.2",
+    "crypto": "^1.0.1",
+    "express": "4.16.2",
+    "express-session": "^1.15.6",
+    "jsonwebtoken": "^8.2.0",
+    "mongoose": "5.0.5",
+    "path": "^0.12.7",
+    "yarn": "^1.5.1"
+  }
+}
