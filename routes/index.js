@@ -2,7 +2,6 @@ var express = require('express');
 var router = express.Router();
 var connection = require('../database');
 
-var Users = require('../models/Users');
 var Ads = require('../models/Ads');
 
 /* GET home page. */
