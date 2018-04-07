@@ -7,9 +7,11 @@ var Ads = require('../models/Ads');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  Users.find({ name: "test" })
-  .then(res => console.log("youpi"));
-  res.render('index', { title: 'Express' });
+  Ads.find()
+  .then(data => {
+      console.log(data)
+      res.render('index', { title: 'Express', data: data });
+  });
 });
 
 module.exports = router;
