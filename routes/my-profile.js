@@ -3,13 +3,12 @@ var router = express.Router();
 var connection = require('../database');
 
 var Users = require('../models/Users');
-var Ads = require('../models/Ads');
 
 /* GET my-profile listing. */
 router.get('/', function(req, res, next) {
-    Users.find({ name: "lamateam" })
+    Users.find({ name: "lucy" })
     .then(data => {
-        console.log(data);
+        console.log("lol");
         res.render('my-profile', { data_user: data });
     });
 });
