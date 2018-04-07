@@ -10,7 +10,7 @@ router.get('/', function(req, res, next) {
   Ads.find()
   .then(data => {
       console.log(data)
-      res.render('index', { title: 'Express', data: data });
+      res.render('index', { data: data });
   });
 });
 
