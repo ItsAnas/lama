@@ -1,0 +1,46 @@
+<%- contentFor('title') %>
+    User List
+
+<%- contentFor('body') %>
+<div class="container">
+    <div class="profile-container">
+        <div class="profile-header d-flex flex-column align-items-center">
+            <img src="https://randomuser.me/api/portraits/men/3.jpg" alt="" class="profile-img">
+            <h1><%= user.lastname %> <%= user.name %></h1>
+            <div class="skills-list">
+                <% const skills = user.skills %>
+                <% skills.forEach(skill => { %>
+                <span class="badge badge-pill badge-primary"><%= skill %></span>
+                <% }) %>
+            </div>
+        </div>
+        <div class="profile-content">
+            <div class="profile-bio">
+                <h2>Bio</h2>
+                <p><%= user.biography %></p>
+            </div>
+            <div class="profile-projects">
+                    <h2>Projects</h2>
+                <div class="card post">
+                    <div class="row" style="margin:10px">
+                        <div class="col-12 d-flex flex-column justify-content-between">
+                            <h3>
+                                <a href="#">Steve Urkel</a>
+                            </h3>
+                            <p class="post-desc">Aenean lacinia bibendum nulla sed consectetur. Fusce dapibus, tellus ac cursus commodo,
+                                tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Maecenas
+                                faucibus mollis interdum. Vestibulum id ligula porta felis euismod semper.</p>
+                            <div class="d-flex skill-wrapper">
+                                <span class="badge badge-pill badge-primary">React JS</span>
+                                <span class="badge badge-pill badge-primary">Angular 2</span>
+                                <span class="badge badge-pill badge-primary">MongoDB</span>
+                            </div>
+                            <button class="btn btn-primary btn-block align-self-end apply-btn">Apply</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
