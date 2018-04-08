@@ -8,7 +8,7 @@ var Ads = require('../models/Ads');
 router.get('/', function(req, res, next) {
   Ads.find()
   .then(data => {
-      res.render('index', { data: data });
+      res.render('home', { data: data });
   });
 });
 
