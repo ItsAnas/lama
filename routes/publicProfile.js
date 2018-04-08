@@ -9,6 +9,7 @@ router.get('/:name', function(req, res, next) {
   const name = req.params.name;
   Users.findOne({name: name})
   .then(user => {
+      console.log(user);
       res.render('public-profile', { user: user });
   });
 });
