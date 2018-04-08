@@ -13,10 +13,17 @@ body {
 
 a {
     color: #30718B !important;
+    text-decoration: none !important;
 }
 
 .img-rounded {
     border-radius: 50%;
+}
+
+*:focus {
+  outline: none !important;
+  border-color: inherit !important;
+  box-shadow: inherit !important; 
 }
 
 /*=============================================
@@ -30,6 +37,12 @@ a {
 
 .badge-primary {
   background-color:#30718B !important;
+  transition-duration: .5s;
+}
+
+.badge-primary:hover {
+  background-color: #4FACAF !important;
+  cursor: pointer;
 }
 
 .btn-outline-primary {
@@ -95,7 +108,7 @@ a {
 =            MyProfil                         =
 =============================================*/
 
-.profile-container {
+.profile-container, .profile-list-container {
     background-color: #fff;
     padding: 15px;
 }
@@ -113,6 +126,21 @@ a {
 }
 
 /*=====  End of MyProfil               ======*/
+
+/*=============================================
+=            Profile List                     =
+=============================================*/
+
+.profile-list-container .card {
+  margin-bottom: 20px;
+}
+
+.profile-list-header {
+  margin-bottom: 20px;
+}
+
+/*=====  End of Profile List           ======*/
+
 
 /*=============================================
 =            Tags            =
