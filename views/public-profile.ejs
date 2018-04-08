@@ -5,7 +5,7 @@
 <div class="container">
     <div class="profile-container">
         <div class="profile-header d-flex flex-column align-items-center">
-            <img src="https://randomuser.me/api/portraits/men/3.jpg" alt="" class="profile-img">
+            <img src="<%= user.profilepic %>" alt="" class="profile-img">
             <h1><%= user.lastname %> <%= user.name %></h1>
             <div class="skills-list">
                 <% const skills = user.skills %>

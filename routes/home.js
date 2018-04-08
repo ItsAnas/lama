@@ -6,7 +6,10 @@ var Ads = require('../models/Ads');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index');
+  Ads.find()
+  .then(data => {
+      res.render('index', { data: data });
+  });
 });
 
 module.exports = router;
