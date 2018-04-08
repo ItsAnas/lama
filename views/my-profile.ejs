@@ -35,6 +35,15 @@
                                 <span class="badge badge-pill badge-primary">Angular 2</span>
                                 <span class="badge badge-pill badge-primary">MongoDB</span>
                             </div>
+                            <div class="user-props">
+                                  <span><i class="fas fa-users"></i> 1</span>
+                                  <ul class="user-props-list mt-2" style="display:none;">
+                                      <li class="d-flex align-items-center"> 
+                                          <img src="https://randomuser.me/api/portraits/women/79.jpg" alt="" class="profile-img d-block mr-2">
+                                          <p class="username">Username</p>
+                                        </li>
+                                  </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -43,3 +52,8 @@
     </div>
 
 </div>
+<script>
+    $( ".user-props" ).click(function() {
+        $( ".user-props-list" ).toggle();
+});
+</script>

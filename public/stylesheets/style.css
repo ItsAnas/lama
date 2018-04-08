@@ -26,6 +26,13 @@ a {
   box-shadow: inherit !important; 
 }
 
+li {
+  list-style: none;
+}
+ul {
+  padding: 0;
+}
+
 /*=============================================
 =            Override Bootstrap               =
 =============================================*/
@@ -119,10 +126,28 @@ a {
     width: 150px;
 }
 
+.user-props-list .profile-img {
+  height: 30px;
+  width: 30px;
+}
+
+.user-props-list .username {
+  margin-bottom: 0;
+}
+
 .profile-header {
     border-bottom: 1px solid #ccc;
     padding-bottom: 20px;
     margin-bottom: 20px;
+}
+
+.user-props {
+  color: #ccc;
+}
+
+.user-props span:hover {
+  color: #0D222B;
+  cursor: pointer;
 }
 
 /*=====  End of MyProfil               ======*/
