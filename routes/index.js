@@ -4,7 +4,7 @@ var connection = require('../database');
 
 var Ads = require('../models/Ads');
 
-/* GET home page. */
+/* GET index page. */
 router.get('/', function(req, res, next) {
   res.render('index');
 });
