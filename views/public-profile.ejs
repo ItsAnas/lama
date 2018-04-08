@@ -20,7 +20,7 @@
         </div>
       </nav>
 
-<div class="container">
+<div class="container animated fadeIn">
     <div class="profile-container">
         <div class="profile-header d-flex flex-column align-items-center">
             <img src="<%= user.profilepic %>" alt="" class="profile-img">
@@ -53,7 +53,7 @@
                                 <span class="badge badge-pill badge-primary">Angular 2</span>
                                 <span class="badge badge-pill badge-primary">MongoDB</span>
                             </div>
-                            <button class="btn btn-primary btn-block align-self-end apply-btn">Join</button>
+                            <button class="btn btn-outline-primary apply-btn">Join</button>
                         </div>
                     </div>
                 </div>
@@ -62,3 +62,21 @@
     </div>
 
 </div>
+
+<script>
+        $(".apply-btn").click(function(){
+        $(this).slideUp("slow", function(){
+          if ($(this)[0].classList[1] == "btn-outline-primary")
+            {
+              $(this).html("Cancel");  
+              $(this).attr('class', 'btn btn-danger apply-btn');
+            }
+          else
+            {
+                  $(this).html("Apply");  
+                  $(this).attr('class', 'btn btn-outline-primary apply-btn');
+            }
+            $(this).slideDown("slow");
+        });   
+    });
+    </script>
