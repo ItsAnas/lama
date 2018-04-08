@@ -54,11 +54,18 @@
                                 <span class="badge badge-pill badge-primary">MongoDB</span>
                             </div>
                             <div class="user-props">
-                                  <span><i class="fas fa-users"></i> 1</span>
+                                  <span class="user-props-btn"><i class="fas fa-users"></i> 1</span>
                                   <ul class="user-props-list mt-2" style="display:none;">
-                                      <li class="d-flex align-items-center"> 
-                                          <img src="https://randomuser.me/api/portraits/women/79.jpg" alt="" class="profile-img d-block mr-2">
-                                          <p class="username">Username</p>
+                                      <li > 
+                                          <div class="row">
+                                              <div class="col-9 d-flex align-items-center">
+                                                  <img src="https://randomuser.me/api/portraits/women/79.jpg" alt="" class="profile-img d-block mr-2">
+                                                  <p class="username">Username</p>
+                                              </div>
+                                              <div class="col-3">
+                                                    <i class="fas fa-check check"></i>
+                                              </div>
+                                          </div>
                                         </li>
                                   </ul>
                             </div>
@@ -71,7 +78,7 @@
 
 </div>
 <script>
-    $( ".user-props" ).click(function() {
+    $( ".user-props-btn" ).click(function() {
         $( ".user-props-list" ).toggle();
 });
 </script>

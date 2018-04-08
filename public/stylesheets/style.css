@@ -18,6 +18,10 @@ a {
     text-decoration: none !important;
 }
 
+a.btn-warning {
+  color: #fff !important;
+}
+
 .img-rounded {
     border-radius: 50%;
 }
@@ -152,6 +156,11 @@ h1,h2,h3,h4,h5,h6 {
 
 .user-props span:hover {
   color: #0D222B;
+  cursor: pointer;
+}
+
+.user-props .check:hover {
+  color: chartreuse;
   cursor: pointer;
 }
 
