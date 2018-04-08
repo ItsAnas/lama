@@ -1,11 +1,13 @@
 @import "./normalize.css";
+@import url('https://fonts.googleapis.com/css?family=Roboto|Raleway');
 
 html, body {
     height: 100%;
 }
 
 body {
-    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+    font-family: 'Raleway', sans-serif !important;
+    font-size: 16px;
 /*     background: linear-gradient(to bottom right, cyan, blue) top right no-repeat;
     background-attachment: fixed; */
     background-color: #0D222B !important; 
@@ -31,6 +33,9 @@ li {
 }
 ul {
   padding: 0;
+}
+h1,h2,h3,h4,h5,h6 {
+  font-family: 'Roboto', sans-serif !important;
 }
 
 /*=============================================
@@ -602,11 +607,42 @@ textarea.input {
 /*=============================================
 =            Presentation                     =
 =============================================*/
-.card-pres:first-child{
+.col-sm-6:first-child .card-pres{
   background-color: #30718B !important;
+}
+
+.card-pres {
+  background-color: #4FACAF !important;
+  padding: 15px !important;
+}
+
+.carousel {
+  height: calc(100vh - 58px);
+  overflow: hidden;
+}
+
+.carousel-caption {
+  top: 30% !important;
+  bottom: inherit !important;
+}
+
+.carousel img {
+  opacity: .5;
+}
+
+.logo-lama {
+  position: fixed;
+  top: 20vh;
+  left: 0;
+  width: 100%;
+  z-index: 9999;
+  color: #fff;
 }
 
 
 /*=====  End of Presentation           ======*/
 
 
+.card {
+  padding: 15px !important;
+}
