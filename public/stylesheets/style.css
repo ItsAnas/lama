@@ -631,8 +631,10 @@ textarea.input {
 }
 
 .carousel-caption {
-  top: 30% !important;
+  top: 27% !important;
   bottom: inherit !important;
+  max-width: 580px;
+margin: 0 auto;
 }
 
 .carousel img {
