@@ -10,6 +10,7 @@ var homeRouter = require('./routes/home');
 var signRouter = require('./routes/sign');
 var myProfileRouter = require('./routes/my-profile')
 var profilsUsersListRouter = require('./routes/users-list');
+var publicProfileRouter = require('./routes/publicProfile')
 
 
 var connection = require('./database');
@@ -34,6 +35,7 @@ connection
       app.use('/sign', signRouter);
       app.use('/my-profile', myProfileRouter);
       app.use('/users-list', profilsUsersListRouter);
+      app.use('/user', publicProfileRouter);
 
       // catch 404 and forward to error handler
       app.use(function(req, res, next) {
