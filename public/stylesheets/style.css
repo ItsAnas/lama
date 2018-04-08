@@ -597,3 +597,16 @@ textarea.input {
 }
 
 /*=====  End of Tags  ======*/
+
+
+/*=============================================
+=            Presentation                     =
+=============================================*/
+.card-pres:first-child{
+  background-color: #30718B !important;
+}
+
+
+/*=====  End of Presentation           ======*/
+
+
