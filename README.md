@@ -11,4 +11,4 @@ This tiny social network has been made during the **Facebook Hackathon 2018**
 
 ## Warning
 
-This project is no longer supported
+This project is no longer supported 😥
